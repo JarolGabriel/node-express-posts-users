@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Create a restfull API for challenge project",
   "dependencies": {
     "bcryptjs": "^2.4.3",

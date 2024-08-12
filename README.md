@@ -1,3 +1,6 @@
+Aquí tienes el archivo `README.md` actualizado con el enlace a la API en Render:
+
+````markdown
 # API RESTful para Gestión de Posts y Usuarios
 
 Este proyecto es una API RESTful construida con Node.js, Express, y MongoDB.
@@ -28,6 +31,7 @@ limpia para el diseño del código.
    git clone http://git@github.com:JarolGabriel/node-express-posts-users.git
    cd node-express-posts-users
    ```
+````
 
 2. **Instalar dependencias**:
 
@@ -87,6 +91,12 @@ limpia para el diseño del código.
   - **Requiere**: Autenticación (token JWT)
   - **Solo permite**: Eliminar el post si el usuario es el autor
 
+## Documentación de la API
+
+Puedes acceder a la API desplegada en Render a través del siguiente enlace:
+
+[API en Render](https://node-express-posts-users-api.onrender.com)
+
 ## Ejemplos de Uso
 
 ### Crear un Usuario
@@ -141,5 +151,5 @@ no dudes en abrir un issue en el repositorio.
 
 ```
 
-Puedes copiar y pegar este contenido directamente en tu archivo `README.md`. Esto te proporcionará una presentación clara y ordenada para los usuarios que quieran entender y usar tu API.
+Con esta estructura, quienes visiten tu repositorio podrán ver fácilmente el enlace a la API desplegada y cómo utilizarla. ¡Buen trabajo!
 ```
