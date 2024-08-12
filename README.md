@@ -148,8 +148,3 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
 ¡Gracias por tu interés en este proyecto! Si tienes alguna pregunta o problema,
 no dudes en abrir un issue en el repositorio.
-
-```
-
-Con esta estructura, quienes visiten tu repositorio podrán ver fácilmente el enlace a la API desplegada y cómo utilizarla. ¡Buen trabajo!
-```
