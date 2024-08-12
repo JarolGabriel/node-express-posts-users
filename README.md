@@ -25,8 +25,8 @@ limpia para el diseño del código.
 1. **Clonar el repositorio**:
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_DIRECTORIO>
+   git clone http://git@github.com:JarolGabriel/node-express-posts-users.git
+   cd node-express-posts-users
    ```
 
 2. **Instalar dependencias**:
