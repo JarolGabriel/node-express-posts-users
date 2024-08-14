@@ -5,6 +5,12 @@ const Post = require("../models/post.model");
 //Para crear un nuevo post, el post creado será asignado al usuario que llamó este endpoint
 
 async function create(postData, userId) {
+  const { tags } = postData;
+
+  if (tags && tags.length > 4) {
+    throw createError(400, "Post can have a maximum of 4 tags");
+  }
+
   postData.author = userId;
   const post = await Post.create(postData);
   return post;

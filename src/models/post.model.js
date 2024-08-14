@@ -18,6 +18,7 @@ const postSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    tags: [String],
   },
   { timestamps: true }
 );
