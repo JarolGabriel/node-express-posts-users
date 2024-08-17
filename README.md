@@ -64,9 +64,26 @@ limpia para el diseño del código.
   - Crea un nuevo usuario.
   - **Requiere**: `name`, `email`, `password`
 
+  ```json
+  {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "password": "securePassword123",
+    "profilePic": "https://example.com/profile-pic.jpg"
+  }
+  ```
+
 - **POST /users/login**
+
   - Autentica un usuario y devuelve un token JWT.
   - **Requiere**: `email`, `password`
+
+  ```json
+  {
+    "email": "johndoe@example.com",
+    "password": "securePassword123"
+  }
+  ```
 
 ### **Posts**
 
@@ -74,6 +91,15 @@ limpia para el diseño del código.
 
   - Crea un nuevo post.
   - **Requiere**: `title`, `image`, `body`, `author` (ID del autor), `tag`
+
+  ```json
+  {
+    "title": "My First Post",
+    "image": "https://example.com/post-image.jpg",
+    "body": "This is the content of the post.",
+    "tag": ["javascript", "webdev"]
+  }
+  ```
 
 - **GET /posts**
 
