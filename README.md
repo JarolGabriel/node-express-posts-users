@@ -73,7 +73,7 @@ limpia para el diseño del código.
 - **POST /posts**
 
   - Crea un nuevo post.
-  - **Requiere**: `title`, `image`, `body`, `author` (ID del autor)
+  - **Requiere**: `title`, `image`, `body`, `author` (ID del autor), `tag`
 
 - **GET /posts**
 
