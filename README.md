@@ -1,4 +1,4 @@
-Aquí tienes el archivo `README.md` actualizado con el enlace a la API en Render:
+
 
 ````markdown
 # API RESTful para Gestión de Posts y Usuarios
