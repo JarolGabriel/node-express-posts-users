@@ -16,6 +16,17 @@ async function create(postData, userId) {
   return post;
 }
 
+//para traer un post por su id
+
+async function getById(postId) {
+  try {
+    const post = await Post.findById(postId); // Supongamos que estás usando Mongoose
+    return post;
+  } catch (error) {
+    throw new Error(`Error retrieving post: ${error.message}`);
+  }
+}
+
 //- Debe soportar el filtrado por titulo usando un query param llamado `search` No requiere autorización
 
 async function getAll(searchQuery) {
@@ -87,4 +98,5 @@ module.exports = {
   getAll,
   deletePost,
   updatePost,
+  getById,
 };
