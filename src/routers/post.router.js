@@ -49,6 +49,33 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Obtener un Post por ID (GET /posts/:id)
+router.get("/:id", async (req, res) => {
+  try {
+    const postId = req.params.id; // Obtén el ID del post desde los parámetros de la solicitud
+    const post = await postCase.getById(postId); // Llama a la función adecuada en tu usecase
+
+    if (!post) {
+      return res.status(404).json({
+        success: false,
+        message: "Post not found",
+      });
+    }
+
+    res.json({
+      success: true,
+      message: "Post retrieved successfully",
+      data: { post },
+    });
+  } catch (error) {
+    res.status(error.status || 500);
+    res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+});
+
 //Actualizar un Post (PATCH /posts/
 
 router.patch("/:id", auth, async (req, res) => {
