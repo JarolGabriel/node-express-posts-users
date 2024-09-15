@@ -25,7 +25,7 @@ async function getAll(searchQuery) {
     query.title = { $regex: searchQuery, $options: "i" };
   }
 
-  const post = await Post.find(query);
+  const post = await Post.find(query).populate("author", "name profilePic");
   return post;
 }
 
