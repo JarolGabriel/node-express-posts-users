@@ -26,7 +26,14 @@ async function getAll(searchQuery) {
   }
 
   const post = await Post.find(query).populate("author", "name profilePic");
-  return post;
+
+  // Procesar los datos para que los tags sean una cadena separada por espacios
+  const processedPosts = post.map((post) => ({
+    ...post.toObject(),
+    tags: post.tags.join(" "), // Convertir el array de tags a una cadena separada por espacios
+  }));
+
+  return processedPosts;
 }
 
 /**Para permitir actualizar un post
