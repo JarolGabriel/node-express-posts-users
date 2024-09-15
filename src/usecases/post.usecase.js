@@ -20,7 +20,10 @@ async function create(postData, userId) {
 
 async function getById(postId) {
   try {
-    const post = await Post.findById(postId); // Supongamos que estás usando Mongoose
+    const post = await Post.findById(postId).populate(
+      "author",
+      "name profilePic"
+    ); // Supongamos que estás usando Mongoose
     return post;
   } catch (error) {
     throw new Error(`Error retrieving post: ${error.message}`);
