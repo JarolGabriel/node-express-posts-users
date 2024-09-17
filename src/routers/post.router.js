@@ -2,7 +2,7 @@ const express = require("express");
 const createError = require("http-errors");
 const auth = require("../middleware/auth");
 const postCase = require("../usecases/post.usecase");
-const upload = require("../uploads/multerUpload");
+const upload = require("../../uploads/multerUpload");
 
 const router = express.Router();
 
