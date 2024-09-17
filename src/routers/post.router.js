@@ -2,15 +2,20 @@ const express = require("express");
 const createError = require("http-errors");
 const auth = require("../middleware/auth");
 const postCase = require("../usecases/post.usecase");
+const upload = require("../uploads/multerUpload");
 
 const router = express.Router();
 
 //Crear un Nuevo Post (POST /posts)
 
-router.post("/", auth, async (req, res) => {
+router.post("/", auth, upload.single("image"), async (req, res) => {
   try {
     const postData = req.body;
     const userId = req.user._id;
+
+    if (req.file) {
+      postData.image = req.file.path; // Guardar la ruta del archivo en el objeto postData
+    }
 
     const newPost = await postCase.create(postData, userId);
 
