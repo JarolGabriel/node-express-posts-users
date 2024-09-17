@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Ruta para registrar un nuevo usuario
 
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const userData = req.body;
     const user = await userCase.signUp(userData);
