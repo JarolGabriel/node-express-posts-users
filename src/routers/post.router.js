@@ -25,6 +25,7 @@ router.post("/", auth, upload.single("image"), async (req, res) => {
       data: { newPost },
     });
   } catch (error) {
+    console.error(error);
     res.status(error.status || 500);
     res.json({
       success: false,
