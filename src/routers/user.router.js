@@ -1,6 +1,8 @@
 const express = require("express");
 const createError = require("http-errors");
 
+const auth = require("../middleware/auth");
+
 const userCase = require("../usecases/user.usecase");
 
 const router = express.Router();
@@ -28,9 +30,9 @@ router.post("/register", async (req, res) => {
 
 // Ruta para obtener un usuario por ID
 
-router.get("/:id", async (req, res) => {
+router.get("/me", auth, async (req, res) => {
   try {
-    const id = req.params.id;
+    const id = req.user.id;
     const user = await userCase.getById(id);
 
     if (!user) {
